@@ -42,7 +42,7 @@ namespace AudioTool
                 case "add":
                     if (AssertNumberOfArguments(args, 3))
                     {
-                        float? valueToAdd = ValidatePercentageInput(args[1]);
+                        float? valueToAdd = ValidatePercentageInput(args[1], true);
                         if (valueToAdd.HasValue)
                         {
                             AddVolume(args[2], valueToAdd.Value);
